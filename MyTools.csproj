@@ -59,6 +59,18 @@
     <ApplicationIcon>App.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.3.8.0\lib\net462\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Video, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.Video.3.8.0\lib\net462\Accord.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Video.VFW, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.Video.VFW.3.8.0\lib\net462\Accord.Video.VFW.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
     <Reference Include="HslCommunication, Version=12.3.0.0, Culture=neutral, PublicKeyToken=3d72ad3b6b5ec0e3, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Dll\HslCommunication.dll</HintPath>
@@ -126,6 +138,30 @@
     <Compile Include="ColorROI.Designer.cs">
       <DependentUpon>ColorROI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\LightSourceTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LightSourceTool.Designer.cs">
+      <DependentUpon>LightSourceTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModbusTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ModbusTool.Designer.cs">
+      <DependentUpon>ModbusTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModelTestTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ModelTestTool.Designer.cs">
+      <DependentUpon>ModelTestTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScreenRecordTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ScreenRecordTool.Designer.cs">
+      <DependentUpon>ScreenRecordTool.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UIToast.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +170,15 @@
     </Compile>
     <Compile Include="Controls\UIPictureBox.Designer.cs">
       <DependentUpon>UIPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CS\RegionSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CS\RegionSelector.Designer.cs">
+      <DependentUpon>RegionSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CS\WindowPicker.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -173,6 +218,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ColorROI.resx">
       <DependentUpon>ColorROI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LightSourceTool.resx">
+      <DependentUpon>LightSourceTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ModbusTool.resx">
+      <DependentUpon>ModbusTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ModelTestTool.resx">
+      <DependentUpon>ModelTestTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ScreenRecordTool.resx">
+      <DependentUpon>ScreenRecordTool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UIPictureBox.resx">
       <DependentUpon>UIPictureBox.cs</DependentUpon>
@@ -232,5 +289,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets'))" />
     <Error Condition="!Exists('packages\OpenCvSharp4.runtime.win.4.11.0.20250507\build\net48\OpenCvSharp4.runtime.win.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\OpenCvSharp4.runtime.win.4.11.0.20250507\build\net48\OpenCvSharp4.runtime.win.props'))" />
+    <Error Condition="!Exists('packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Accord.3.8.0\build\Accord.targets'))" />
   </Target>
+  <Import Project="packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('packages\Accord.3.8.0\build\Accord.targets')" />
 </Project>
