@@ -126,11 +126,14 @@
     <Compile Include="ColorROI.Designer.cs">
       <DependentUpon>ColorROI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UIPictrueBox.cs">
+    <Compile Include="Controls\UIToast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\UIPictureBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UIPictrueBox.Designer.cs">
-      <DependentUpon>UIPictrueBox.cs</DependentUpon>
+    <Compile Include="Controls\UIPictureBox.Designer.cs">
+      <DependentUpon>UIPictureBox.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -171,8 +174,8 @@
     <EmbeddedResource Include="ColorROI.resx">
       <DependentUpon>ColorROI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UIPictrueBox.resx">
-      <DependentUpon>UIPictrueBox.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\UIPictureBox.resx">
+      <DependentUpon>UIPictureBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
