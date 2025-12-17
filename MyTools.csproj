@@ -126,17 +126,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CameraTest\CameraHik.cs" />
-    <Compile Include="CameraTest\CameraTest.cs">
+    <Compile Include="CameraTest\CameraTestTool.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CameraTest\CameraTest.Designer.cs">
-      <DependentUpon>CameraTest.cs</DependentUpon>
+    <Compile Include="CameraTest\CameraTestTool.Designer.cs">
+      <DependentUpon>CameraTestTool.cs</DependentUpon>
     </Compile>
     <Compile Include="ColorROI.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ColorROI.Designer.cs">
       <DependentUpon>ColorROI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AutomaticImageBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AutomaticImageBrowser.Designer.cs">
+      <DependentUpon>AutomaticImageBrowser.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\LightSourceTool.cs">
       <SubType>UserControl</SubType>
@@ -161,6 +167,12 @@
     </Compile>
     <Compile Include="Controls\ScreenRecordTool.Designer.cs">
       <DependentUpon>ScreenRecordTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UIListMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UIListMenu.Designer.cs">
+      <DependentUpon>UIListMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\UIToast.cs">
       <SubType>Form</SubType>
@@ -213,11 +225,14 @@
     <Compile Include="UIRangeTrackBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="CameraTest\CameraTest.resx">
-      <DependentUpon>CameraTest.cs</DependentUpon>
+    <EmbeddedResource Include="CameraTest\CameraTestTool.resx">
+      <DependentUpon>CameraTestTool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ColorROI.resx">
       <DependentUpon>ColorROI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AutomaticImageBrowser.resx">
+      <DependentUpon>AutomaticImageBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\LightSourceTool.resx">
       <DependentUpon>LightSourceTool.cs</DependentUpon>
@@ -230,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ScreenRecordTool.resx">
       <DependentUpon>ScreenRecordTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UIListMenu.resx">
+      <DependentUpon>UIListMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UIPictureBox.resx">
       <DependentUpon>UIPictureBox.cs</DependentUpon>
