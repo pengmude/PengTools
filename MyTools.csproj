@@ -150,6 +150,12 @@
     <Compile Include="Controls\LightSourceTool.Designer.cs">
       <DependentUpon>LightSourceTool.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\DependenciesGui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DependenciesGui.Designer.cs">
+      <DependentUpon>DependenciesGui.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ModbusTool.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     <EmbeddedResource Include="Controls\LightSourceTool.resx">
       <DependentUpon>LightSourceTool.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DependenciesGui.resx">
+      <DependentUpon>DependenciesGui.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ModbusTool.resx">
       <DependentUpon>ModbusTool.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +296,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Tools\DependenciesGui\DependenciesGui.exe.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -298,6 +308,14 @@
     <Content Include="App.ico" />
     <Content Include="Dll\HslCommunication.dll" />
     <Content Include="Dll\MvCameraControl.Net.dll" />
+    <Content Include="Tools\DependenciesGui\ClrPhlib.dll" />
+    <Content Include="Tools\DependenciesGui\DependenciesGui.exe" />
+    <Content Include="Tools\DependenciesGui\DependenciesLib.dll" />
+    <Content Include="Tools\DependenciesGui\Dragablz.dll" />
+    <Content Include="Tools\DependenciesGui\Mono.Cecil.dll" />
+    <Content Include="Tools\DependenciesGui\Mono.Cecil.Mdb.dll" />
+    <Content Include="Tools\DependenciesGui\Mono.Cecil.Pdb.dll" />
+    <Content Include="Tools\DependenciesGui\Mono.Cecil.Rocks.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />
@@ -310,4 +328,11 @@
     <Error Condition="!Exists('packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Accord.3.8.0\build\Accord.targets'))" />
   </Target>
   <Import Project="packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('packages\Accord.3.8.0\build\Accord.targets')" />
+  <PropertyGroup>
+    <PreBuildEvent>rem 复制 Tools目录及其所有内容到输出目录
+rem /E：复制所有子目录，即使它们为空。
+rem /Y：覆盖现有文件而不提示。
+rem /I：如果目标不存在，则假定目标必须是目录。
+xcopy "$(ProjectDir)Tools\*" "Tools\" /E /Y /I</PreBuildEvent>
+  </PropertyGroup>
 </Project>
