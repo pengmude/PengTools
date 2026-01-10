@@ -150,12 +150,6 @@
     <Compile Include="Controls\LightSourceTool.Designer.cs">
       <DependentUpon>LightSourceTool.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DependenciesGui.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\DependenciesGui.Designer.cs">
-      <DependentUpon>DependenciesGui.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\ModbusTool.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\LightSourceTool.resx">
       <DependentUpon>LightSourceTool.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\DependenciesGui.resx">
-      <DependentUpon>DependenciesGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ModbusTool.resx">
       <DependentUpon>ModbusTool.cs</DependentUpon>
